@@ -28,7 +28,7 @@ window.onscroll = function() {
       let qrPanel = document.querySelector('#qr-panel');
       let qr = new QRious({
         element: qrPanel,
-        value: 'https://example.com',
+        value: 'https://hanung.space',
         size: 300,
         mime: 'image/png',
       });
