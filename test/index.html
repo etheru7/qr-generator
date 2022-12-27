@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Styling</title>
+    <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="canvas"></div>
+      <input class="appearance-none block w-full bg-transparent text-putih border border-gray-200 rounded py-3 px-4 outline-none focus:outline-none focus:bg-transparent focus:border-gray-500" id="qr-input" type="text" placeholder="Your Link Here!">
+      
+       <button class="flex mx-auto text-putih bg-violet-400 py-2 px-32 rounded-lg font-primary font-semibold mt-3 mb-12" id="qr-btn">Generate</button>
+       
+   <button class="flex mx-auto text-putih bg-violet-400 py-2 px-28 rounded-lg font-primary font-semibold mt-3" onclick="download()" id="btnDownload">Download</button>
+<script type="text/javascript">
+
+        let qrPanel = document.querySelector("#qr-panel");
+        let qrInput = document.querySelector("#qr-input");
+        let qrBtn = document.querySelector("#qr-btn");
+        
+        //Generate qrcode
+    const qrCode = new QRCodeStyling({
+        width: 250,
+        height: 250,
+        type: "png",
+        data: "qr-input",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+        dotsOptions: {
+            color: "#4267b2",
+            type: "rounded"
+        },
+        backgroundOptions: {
+            color: "#e9ebee",
+        },
+        imageOptions: {
+            crossOrigin: "anonymous",
+            margin: 20
+        }
+    });
+
+    qrCode.append(document.getElementById("canvas"));
+    
+    
+    //action download qrcode
+    function download() { 
+    qrCode.download({ name: "qrcode-by-etheru", extension: "png" })
+    };
+    
+</script>
+</body>
+</html>

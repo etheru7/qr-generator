@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <title>QR GENERATOR</title>
+</head>
+<body class="bg-hitam">
+  <!-- header start -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4">
+          <a href="#home" class="text-bold font-primary font-bold text-xl text-putih block py-6">Hanung</a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 md:hidden">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
+          
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white drop-shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full md:shadow-none md:rounded-none md:text-medium md:block md:static md:bg-transparent md:max-w-full">
+            <ul class="block md:flex divide-y md:divide-y-0">
+              <li class="group">
+                <a href="#home" class="text-base text-dark md:text-putih py-2 mx-8 group-hover:text-violet-400 font-primary md:hover:underline md:text-burger flex">Home</a>
+              </li>
+              <li class="group">
+                <a href="https://hanung.space" target="_blank" class="text-base text-dark md:text-putih py-4 md:py-2 mx-8 group-hover:text-violet-400 font-primary md:text-burger md:hover:underline flex">Blog</a>
+              </li>
+            </ul>
+          </nav>
+    
+          </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <div class="container">
+    <h1 class="font-primary font-semibold text-2xl text-putih mb-12 mt-24">QR GENERATOR</h1>
+  </div>
+  
+   <!-- form qrcode -->
+   <div class="container">
+     <div class="border-dashed border-2 py-3 rounded-lg border-violet-400 h-min-screen mb-2">
+       <h1 class="font-semibold uppercase font-primary text-putih text-center">Your QRCODE</h2>
+
+
+          <div class="px-3">
+         <div id="qr-container">
+  <canvas class="flex mx-auto mt-3 border-dashed border-2 border-violet-400 rounded-lg" id="qr-panel"></canvas>
+         </div>
+            <h3 class="text-putih font-primary font-semibold mt-3">Generate new QR code :</h3>
+      <input class="appearance-none flex block mx-auto w-full bg-transparent text-putih border border-gray-100 rounded py-3 px-4 outline-none focus:outline-none focus:bg-transparent focus:border-gray-500 mt-4" id="qr-input" type="text" placeholder="Your Link Here!">
+      
+          <button class="text-white bg-violet-400 hover:bg-violet-600 focus:ring-2 focus:outline-none focus:ring-violet-500 font-primary font-semibold rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3" id="qr-btn">Generate</button>
+          
+         <button class="text-white bg-violet-400 hover:bg-violet-600 focus:ring-2 focus:outline-none focus:ring-violet-500 font-primary font-semibold rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mt-3" id="downloadBtn">Download QR code</button>
+         
+
+     </div>
+     </div>
+   </div>
+   
+   <div class="text-center font-primary font-semibold text-sm text-putih mb-3">&copy; 2022 - 2033 • hanung dwi prasetyo </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
